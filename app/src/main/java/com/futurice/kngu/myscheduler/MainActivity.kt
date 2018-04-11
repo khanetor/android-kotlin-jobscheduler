@@ -22,9 +22,9 @@ class MainActivity : AppCompatActivity() {
             snackbar(mainActivity, "Schedule")
 
             val builder = JobInfo.Builder(1, mComponentName)
-            builder.setPeriodic(5000)
 
-            mJobScheduler.schedule(builder.build())
+            val jobScheduleResult = mJobScheduler.schedule(builder.setPeriodic(5000).setPersisted(true).build())
+            println(jobScheduleResult == JobScheduler.RESULT_SUCCESS)
         }
 
         unscheduleBtn.setOnClickListener {

@@ -36,4 +36,6 @@ dependencies {
     implementation "org.jetbrains.anko:anko-commons:$anko_version"
     implementation "org.jetbrains.anko:anko-design:$anko_version"
     implementation "org.jetbrains.anko:anko-design-coroutines:$anko_version"
+
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
 }
